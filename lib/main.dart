@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: Strings.title,
-      theme: ThemeData(
-          primarySwatch: Colors.blue, accentColor: Colors.amber.shade800),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -46,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 56,
               width: 380,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 235, 80, 8),
+                color: const Color.fromARGB(255, 235, 80, 8),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
@@ -60,10 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         );
-        // ListTile(
-        //   title: Text("Item #${index + 1}"),
-        //   tileColor: Theme.of(context).accentColor,
-        // contentPadding: EdgeInsets.all(20),
       }));
     }
     return GridView.builder(
